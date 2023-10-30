@@ -64,7 +64,7 @@ const renderCard = (data) => {
   </div>
   <div class="tab-pane fade " id="youtube">
       <h5 class="card-title">Youtube link receipe</h5>
-      <p class="card-text">${link}</p>
+      <a class="card-text">${link}</a>
   </div>
 </div>`;
   document.querySelector(".container").insertAdjacentHTML("beforeend", html);
