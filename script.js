@@ -59,8 +59,8 @@ const renderCard = (data) => {
       <p class="card-text"><i class="fa-solid fa-bowl-food"></i>With ${ingredients} </p>
   </div>
   <div class="tab-pane fade " id="receipe">
-      <h5 class="card-title">Receipe</h5>
-      <p class="card-text"><i class="fa-solid fa-utensils"></i>${receipe}</p>
+      <h5 class="card-title"><i class="fa-solid fa-utensils"></i> Receipe</h5>
+      <p class="card-text">${receipe}</p>
   </div>
   <div class="tab-pane fade " id="youtube">
       <h5 class="card-title">Youtube link receipe</h5>
@@ -70,6 +70,11 @@ const renderCard = (data) => {
   document.querySelector(".container").insertAdjacentHTML("beforeend", html);
 };
 btnReceipe.addEventListener("click", () => {
+  btnReceipe.classList.add("hidden");
+  btnAnother.classList.remove("hidden");
+  getData();
+});
+btnAnother.addEventListener("click", () => {
   if (container.firstElementChild) container.firstElementChild.remove();
   getData();
 });
