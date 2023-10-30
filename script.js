@@ -32,10 +32,10 @@ const renderCard = (data) => {
     data.meals[0].strIngredient10,
   ];
 
-  const html = `   <div class="d-flex justify-content-center mt-5">      
-  <div class="card text-center ">
+  const html = `   <div class="showCard d-flex justify-content-center mt-5">      
+  <div class="card  text-center ">
       <div class="d-flex justify-content-center">
-          <img src='${img}'< class="card-img-top " alt="..." style="width: 30%;">
+          <img src='${img}'< class="card-img-top " alt="..." style="width: 50%;">
           
       </div>
       <h3>${name}</h3>
@@ -63,8 +63,11 @@ const renderCard = (data) => {
       <p class="card-text">${receipe}</p>
   </div>
   <div class="tab-pane fade " id="youtube">
-      <h5 class="card-title">Youtube link receipe</h5>
-      <a class="card-text">${link}</a>
+      <h5 class="card-title"><a class="card-text" href='${link}'>Youtube link receipe</a></h5>
+      <iframe width="100%" height="400px" src="${link.replace(
+        "watch?v=",
+        "embed/"
+      )}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 </div>`;
   document.querySelector(".container").insertAdjacentHTML("beforeend", html);
