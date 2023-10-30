@@ -1,0 +1,32 @@
+body{
+    background-image: url('img/planche.jpg');
+    background-size: cover;
+    height: 200vh;
+    backdrop-filter: blur(10px);
+}
+
+
+
+.card{
+    width: 50vw;
+}
+.hiddenCard{
+     opacity: 0;
+     transition: opacity 1s
+}
+
+.btn{
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: brown;
+    filter: brightness(50%);
+    transition: ease-in 0.2s;
+}
+.btn:hover{
+    filter: brightness(100%);
+    background-color: brown;
+}
+.hidden{
+display: none;}
